@@ -1,0 +1,117 @@
+body, .bg_image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-image: url('images/simpleBG.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    user-select: none;
+    /* animation: bg_changer 10s infinite; */
+}
+.bg_image{
+    filter: blur(4px);
+}
+
+@keyframes bg_changer {
+    0% {background-image: url('images/bg1.jpeg');}
+    20% {background-image: url('images/bg2.jpeg');}
+    40% {background-image: url('images/bg3.jpeg');}
+    60% {background-image: url('images/bg4.jpeg');}
+    80% {background-image: url('images/bg5.jpeg');}
+    100% {background-image: url('images/bg1.jpeg');}
+}
+
+.homescreen{
+    display: block;
+    /* background-color: lightblue; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.homescreen .start{
+    display: block;
+    font-size: 26px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: green;
+    border: 2px ridge blue;
+    background-color: rgb(223, 255, 242);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    border-radius: 100px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.top_frame{
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+}
+.top_frame img{
+    display: none;
+    animation: anim1 4s;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px 0px 4px 1px cyan;
+}
+@keyframes anim1 {
+    0% {scale: 1;}
+    10% {scale: 1;}
+    70% {scale: 0.1; opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.message{
+    display: none;
+    min-width: 200px;
+    max-width: 300px;
+    border: 2px ridge magenta;
+    border-radius: 5px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    background-image: url('images/simpleBG2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3px;
+    animation: anim2 3s;
+    overflow: hidden;
+}
+@keyframes anim2 {
+    0% {opacity: 0; rotate: 0deg;}
+    100% {opacity: 1; rotate: 360deg;}
+}
+.message h2{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-top: 0;
+    color: rgb(0, 38, 255);
+}
+.message p{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgb(0, 38, 255);
+    font-weight: 500;
+}
